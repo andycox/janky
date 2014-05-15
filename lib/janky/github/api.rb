@@ -92,8 +92,8 @@ module Janky
         http = Net::HTTP.new(uri.host, uri.port)
 
         http.use_ssl     = true
-        http.verify_mode = OpenSSL::SSL::VERIFY_PEER
-        http.ca_path     = "/etc/ssl/certs"
+        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+        #http.ca_path     = "/etc/ssl/certs"
 
         http
       end
